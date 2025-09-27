@@ -3,10 +3,277 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <meta http-equiv="refresh" content="0; URL=./src/pages/home.html">
-</head>
-<body>
+    <title>Fortnite Academy | Professional Coaching</title>
     
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-900 text-white">
+
+    <!-- Header / Navigation -->
+    <header class="bg-gray-900 bg-opacity-80 backdrop-blur-sm fixed top-0 left-0 w-full z-50 border-b border-gray-700">
+        <div class="container mx-auto flex justify-between items-center p-4">
+            <a href="index.html" class="flex items-center space-x-3">
+                <div class="w-10 h-10 bg-red-600 rounded-full flex items-center justify-center font-black text-white text-xl">
+                    FA
+                </div>
+                <span class="text-2xl font-bold text-white">Fortnite Academy</span>
+            </a>
+            <nav class="hidden md:flex space-x-6 items-center">
+                <a href="#about" class="text-gray-300 hover:text-red-400 transition-all duration-300 transform hover:-translate-y-0.5">About</a>
+                <a href="#results" class="text-gray-300 hover:text-red-400 transition-all duration-300 transform hover:-translate-y-0.5">Results</a>
+                <a href="#services" class="text-gray-300 hover:text-red-400 transition-all duration-300 transform hover:-translate-y-0.5">Coaching</a>
+                <a href="free-coaching.html" class="text-gray-300 hover:text-red-400 transition-all duration-300 transform hover:-translate-y-0.5">Free Coaching</a>
+                <a href="#vouches" class="text-gray-300 hover:text-red-400 transition-all duration-300 transform hover:-translate-y-0.5">Vouches</a>
+                <a href="https://discord.gg/fortnite-coaching" target="_blank" class="bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-lg transition-transform transform hover:scale-105">Join Discord</a>
+            </nav>
+            <button id="mobile-menu-button" class="md:hidden text-white">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden">
+            <a href="#about" class="block py-2 px-4 text-sm text-gray-300 hover:bg-gray-800">About</a>
+            <a href="#results" class="block py-2 px-4 text-sm text-gray-300 hover:bg-gray-800">Results</a>
+            <a href="#services" class="block py-2 px-4 text-sm text-gray-300 hover:bg-gray-800">Coaching</a>
+            <a href="free-coaching.html" class="block py-2 px-4 text-sm text-gray-300 hover:bg-gray-800">Free Coaching</a>
+            <a href="#vouches" class="block py-2 px-4 text-sm text-gray-300 hover:bg-gray-800">Vouches</a>
+             <a href="https://discord.gg/fortnite-coaching" target="_blank" class="block py-2 px-4 text-sm bg-red-600 text-white hover:bg-red-700">Join Discord</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="min-h-screen flex items-center justify-center text-center bg-cover bg-center relative" style="background-image: linear-gradient(rgba(17, 24, 39, 0.8), rgba(17, 24, 39, 0.8)), url('https://static.fortnite.com/webpack/8f9484f10eb14f85a189a7c24a6d2da3.jpg');">
+            <canvas id="hero-canvas" class="absolute top-0 left-0 w-full h-full z-0"></canvas>
+            <div class="container mx-auto px-4 z-10 relative">
+                <h1 id="hero-headline" class="text-5xl md:text-7xl font-extrabold leading-tight mb-2 min-h-[100px] md:min-h-[170px]"></h1>
+                <p class="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto mb-6 opacity-0" style="transition: opacity 0.5s ease 0.5s;">
+                    Best Fortnite coaching in the world, with 150+ vouches/reviews. Proven results such as earnings and FNCS heats qualification.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center opacity-0" style="transition: opacity 0.5s ease 1s;">
+                    <a href="#services" class="bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-8 rounded-lg text-lg transition duration-300 ease-in-out transform hover:scale-105 shadow-lg">
+                        View Coaching Plans
+                    </a>
+                    <a href="https://discord.gg/fortnite-coaching" target="_blank" class="bg-gray-700 hover:bg-gray-600 text-white font-bold py-3 px-8 rounded-lg text-lg transition duration-300 ease-in-out transform hover:scale-105 shadow-lg">
+                        Join The Community
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Me Section -->
+        <section id="about" class="py-20 bg-gray-900">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-12 fade-in-section">
+                    <h2 class="text-4xl font-extrabold">About The Coach: Scared</h2>
+                    <p class="text-lg text-red-400 mt-2">Proven results as a player and a mentor.</p>
+                </div>
+                <div class="grid md:grid-cols-2 gap-10">
+                    <!-- Personal Achievements -->
+                    <div class="bg-gray-800 p-8 rounded-xl shadow-lg fade-in-section transition-transform transform hover:scale-105 duration-300">
+                        <h3 class="text-2xl font-bold mb-6 text-center">🏆 Personal Achievements</h3>
+                        <ul class="space-y-4 text-lg">
+                            <li class="flex items-center"><span class="bg-red-500/20 text-red-300 text-sm font-bold mr-3 px-2.5 py-0.5 rounded-full">UNREAL</span> Battle Royale & Top 12k</li>
+                            <li class="flex items-center"><span class="bg-red-500/20 text-red-300 text-sm font-bold mr-3 px-2.5 py-0.5 rounded-full">UNREAL</span> Reload</li>
+                            <li class="flex items-center"><span class="bg-red-500/20 text-red-300 text-sm font-bold mr-3 px-2.5 py-0.5 rounded-full">UNREAL</span> Reload ZB</li>
+                            <li class="flex items-center"><span class="bg-green-500/20 text-green-300 text-sm font-bold mr-3 px-2.5 py-0.5 rounded-full">FNCS</span> Top 600 Placement</li>
+                        </ul>
+                    </div>
+                    <!-- Coaching Achievements -->
+                    <div class="bg-gray-800 p-8 rounded-xl shadow-lg fade-in-section transition-transform transform hover:scale-105 duration-300">
+                        <h3 class="text-2xl font-bold mb-6 text-center">🎓 Coaching Achievements</h3>
+                         <ul class="space-y-4 text-gray-300 text-md">
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-green-400 mr-2 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                                <span>Coached player to <strong>34th in FNCS Play-ins EU</strong>, qualifying for Heats.</span>
+                            </li>
+                             <li class="flex items-start">
+                                <svg class="w-5 h-5 text-green-400 mr-2 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                                <span>Guided OCE duo to <strong>$100 earnings</strong> in a CCC tournament.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-green-400 mr-2 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                                <span>Coached a player from 0 PR to over <strong>120 PR in one month</strong>, achieving Top 50.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Proven Results Section -->
+        <section id="results" class="py-20 bg-gray-800/50">
+            <div class="container mx-auto px-4">
+                 <div class="text-center mb-12 fade-in-section">
+                    <h2 class="text-4xl font-extrabold">Proof in the Placements</h2>
+                    <p class="text-lg text-gray-300 mt-2">Coaching that translates to tangible tournament results.</p>
+                </div>
+                <div class="bg-gray-900 rounded-xl shadow-2xl p-6 max-w-4xl mx-auto fade-in-section transition-transform transform hover:scale-105 duration-300">
+                    <img src="result.png" alt="FNCS Qualification Result" class="rounded-lg w-full h-auto shadow-lg" onerror="this.onerror=null;this.src='https://placehold.co/1280x720/111827/ffffff?text=Image+Not+Found';">
+                    <p class="text-center mt-4 text-gray-400">One of our clients qualified for his first ever FNCS group stages in the 2025 Major 3.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Services / Coaching Plans Section -->
+        <section id="services" class="py-20 bg-gray-900">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-12 fade-in-section">
+                    <h2 class="text-4xl font-extrabold">1-on-1 Professional Coaching</h2>
+                    <p class="text-lg text-gray-300 mt-2">Affordable plans to fit your specific needs.</p>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                    <!-- General Coaching -->
+                    <div class="bg-gray-800 p-8 rounded-xl shadow-2xl border border-gray-700 flex flex-col fade-in-section transition-transform transform hover:scale-105 duration-300">
+                        <h3 class="text-2xl font-bold text-red-400 mb-4">General Coaching</h3>
+                        <p class="text-gray-400 mb-6 flex-grow">Live sessions focusing on mechanics, game sense, and strategy.</p>
+                        <div class="space-y-2 mb-6 text-lg">
+                            <p class="text-white"><span class="font-bold text-2xl">$3</span> / 30 Minutes</p>
+                            <p class="text-white"><span class="font-bold text-2xl">$5</span> / 1 Hour</p>
+                            <p class="text-white"><span class="font-bold text-2xl">$8</span> / 2 Hours</p>
+                        </div>
+                        <a href="https://discord.gg/fortnite-coaching" target="_blank" class="mt-auto w-full text-center bg-gray-700 hover:bg-gray-600 text-white font-bold py-2 px-4 rounded-lg transition-transform transform hover:scale-105">Create a Ticket</a>
+                    </div>
+                    <!-- VOD Review -->
+                    <div class="bg-gray-800 p-8 rounded-xl shadow-2xl border-2 border-red-500 flex flex-col fade-in-section relative overflow-hidden transition-transform transform hover:scale-105 duration-300">
+                        <span class="absolute top-3 right-[-32px] bg-red-500 text-white text-xs font-bold px-8 py-1 transform rotate-45">POPULAR</span>
+                        <h3 class="text-2xl font-bold text-red-400 mb-4">VOD Review Session</h3>
+                        <p class="text-gray-400 mb-6 flex-grow">In-depth analysis of your tournament gameplay to identify mistakes and areas for improvement.</p>
+                        <div class="mb-6">
+                             <p class="text-white"><span class="font-bold text-4xl">$10</span><br><span class="text-gray-400">/ 10 Game Review</span></p>
+                        </div>
+                        <a href="https://discord.gg/fortnite-coaching" target="_blank" class="mt-auto w-full text-center bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-lg transition-transform transform hover:scale-105">Book a Review</a>
+                    </div>
+                    <!-- Tournament Coaching -->
+                    <div class="bg-gray-800 p-8 rounded-xl shadow-2xl border border-gray-700 flex flex-col fade-in-section transition-transform transform hover:scale-105 duration-300">
+                        <h3 class="text-2xl font-bold text-red-400 mb-4">Tournament Coaching</h3>
+                        <p class="text-gray-400 mb-6 flex-grow">Live coaching during a tournament to help with rotations, end-game calls, and mental focus.</p>
+                        <div class="mb-6">
+                            <p class="text-white"><span class="font-bold text-4xl">$15</span><br><span class="text-gray-400">/ Per Tournament</span></p>
+                        </div>
+                        <a href="YOUR_GOOGLE_CALENDAR_LINK" target="_blank" class="mt-auto w-full text-center bg-gray-700 hover:bg-gray-600 text-white font-bold py-2 px-4 rounded-lg transition-transform transform hover:scale-105">Check Availability</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Vouches / Testimonials -->
+        <section id="vouches" class="py-20 bg-gray-800/50">
+            <div class="container mx-auto px-4">
+                 <div class="text-center mb-12 fade-in-section">
+                    <h2 class="text-4xl font-extrabold">What Players Are Saying</h2>
+                    <p class="text-lg text-gray-300 mt-2">150+ positive reviews from satisfied players.</p>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Review Card -->
+                     <div class="bg-gray-900 p-6 rounded-lg shadow-lg fade-in-section transition-transform transform hover:scale-105 duration-300">
+                        <p class="text-gray-300 italic flex-grow">"Best coach ever i can not say anything bad"</p>
+                        <div class="flex items-center mt-4">
+                           <img src="https://placehold.co/40x40/1f2937/ffffff?text=L" alt="Reviewer" class="w-10 h-10 rounded-full mr-3">
+                           <p class="font-bold text-red-400">- Lunar</p>
+                        </div>
+                    </div>
+                    <!-- Review Card -->
+                     <div class="bg-gray-900 p-6 rounded-lg shadow-lg fade-in-section transition-transform transform hover:scale-105 duration-300">
+                        <p class="text-gray-300 italic flex-grow">"Vouch W dropmaps"</p>
+                        <div class="flex items-center mt-4">
+                           <img src="https://placehold.co/40x40/1f2937/ffffff?text=M" alt="Reviewer" class="w-10 h-10 rounded-full mr-3">
+                           <p class="font-bold text-red-400">- MakutoTBRC</p>
+                        </div>
+                    </div>
+                    <!-- Review Card -->
+                    <div class="bg-gray-900 p-6 rounded-lg shadow-lg fade-in-section transition-transform transform hover:scale-105 duration-300">
+                        <p class="text-gray-300 italic flex-grow">"in depth vod review and helping with my input for just 10 quid"</p>
+                        <div class="flex items-center mt-4">
+                           <img src="https://placehold.co/40x40/1f2937/ffffff?text=K" alt="Reviewer" class="w-10 h-10 rounded-full mr-3">
+                           <p class="font-bold text-red-400">- kyroMD</p>
+                        </div>
+                    </div>
+                    <!-- Review Card -->
+                     <div class="bg-gray-900 p-6 rounded-lg shadow-lg fade-in-section transition-transform transform hover:scale-105 duration-300">
+                        <p class="text-gray-300 italic flex-grow">"w coaching, he helped me actually improve and told me excatly what was wrong..."</p>
+                        <div class="flex items-center mt-4">
+                           <img src="https://placehold.co/40x40/1f2937/ffffff?text=L" alt="Reviewer" class="w-10 h-10 rounded-full mr-3">
+                           <p class="font-bold text-red-400">- loric!</p>
+                        </div>
+                    </div>
+                    <!-- Review Card -->
+                     <div class="bg-gray-900 p-6 rounded-lg shadow-lg fade-in-section transition-transform transform hover:scale-105 duration-300">
+                        <p class="text-gray-300 italic flex-grow">"VOUCH @! scared god igl helped me learn mistakes and js overall improve..."</p>
+                        <div class="flex items-center mt-4">
+                           <img src="https://placehold.co/40x40/1f2937/ffffff?text=B" alt="Reviewer" class="w-10 h-10 rounded-full mr-3">
+                           <p class="font-bold text-red-400">- BIG ethangr.</p>
+                        </div>
+                    </div>
+                     <!-- Review Card -->
+                     <div class="bg-gray-900 p-6 rounded-lg shadow-lg fade-in-section transition-transform transform hover:scale-105 duration-300">
+                        <p class="text-gray-300 italic flex-grow">"BEST FUCKING COACH GOT MY FIRST EARNS IN CCC"</p>
+                        <div class="flex items-center mt-4">
+                           <img src="https://placehold.co/40x40/1f2937/ffffff?text=V" alt="Reviewer" class="w-10 h-10 rounded-full mr-3">
+                           <p class="font-bold text-red-400">- vision</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Free Coaching & Resources Section -->
+        <section id="free" class="py-20 bg-gray-900">
+            <div class="container mx-auto px-4 fade-in-section">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl font-extrabold">Get Access to Free Resources</h2>
+                    <p class="text-lg text-red-400 mt-2">Join the Discord for invaluable perks at no cost.</p>
+                </div>
+                <div class="bg-gray-800 rounded-xl shadow-lg p-8 lg:p-12 max-w-5xl mx-auto text-center transition-transform transform hover:scale-105 duration-300">
+                     <h3 class="text-3xl font-bold text-white mb-4">Unlock Free VOD Reviews & Video Guides</h3>
+                    <p class="text-gray-300 mb-8">We have a dedicated page with free video content covering everything from defensive fighting to pro player VOD reviews. Click the button below to explore all the free content!</p>
+                    <a href="free-coaching.html" class="inline-block bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-8 rounded-lg text-lg transition duration-300 ease-in-out transform hover:scale-105 shadow-lg">
+                        Explore Free Content
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final CTA -->
+        <section class="bg-red-600 py-20">
+            <div class="container mx-auto px-4 text-center fade-in-section">
+                 <h2 class="text-4xl font-extrabold text-white">Ready to Start Winning?</h2>
+                 <p class="text-lg text-red-100 max-w-2xl mx-auto mt-4 mb-8">
+                     Stop guessing and start improving with proven strategies. Join our Discord server today to connect with the coach and other dedicated players.
+                 </p>
+                <a href="https://discord.gg/fortnite-coaching" target="_blank" class="bg-white text-red-600 font-bold py-3 px-10 rounded-lg text-lg transition duration-300 ease-in-out transform hover:scale-105 shadow-lg">
+                    Join The Discord Now
+                </a>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="bg-gray-900 border-t border-gray-800 py-6">
+        <div class="container mx-auto text-center text-gray-400">
+            <div class="flex justify-center space-x-6 mb-4">
+                <a href="https://x.com/scaredfn77" target="_blank" class="text-gray-400 hover:text-white transition-transform transform hover:scale-125 duration-300">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                </a>
+                <a href="https://www.tiktok.com/@scared.fnbr" target="_blank" class="text-gray-400 hover:text-white transition-transform transform hover:scale-125 duration-300">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M16.6 5.82s.51.5 0 0A4.27 4.27 0 0 1 15.54 3h-3.09v12.4a2.59 2.59 0 0 1-2.59 2.59A2.59 2.59 0 0 1 7.27 15.4a2.59 2.59 0 0 1 2.59-2.59h.4v-3.09h-.4a5.69 5.69 0 0 0-5.69 5.69A5.69 5.69 0 0 0 9.86 21a5.69 5.69 0 0 0 5.69-5.69V7.17a7.45 7.45 0 0 0 4.1-1.78l.22-1.39Z"/></svg>
+                </a>
+            </div>
+            <p>&copy; 2025 Fortnite Academy. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Interactivity -->
+    <script src="index.js" defer></script>
 </body>
 </html>
+
