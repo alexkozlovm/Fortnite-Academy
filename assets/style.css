@@ -1,0 +1,112 @@
+body {
+    font-family: 'Inter', sans-serif;
+    scroll-behavior: smooth;
+}
+
+/* Animation for elements fading in on scroll */
+.fade-in-section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.fade-in-section.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Typing cursor for hero */
+.blinking-cursor {
+    font-weight: 500;
+    color: #ef4444; /* red-500 */
+    animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+    from, to {
+        color: transparent;
+    }
+    50% {
+        color: #ef4444;
+    }
+}
+
+/* Hero Section Animations */
+.animate-slide-down-hero {
+    animation: slide-down 0.8s ease-out forwards;
+    opacity: 0;
+}
+.animate-slide-down-hero-delay {
+    animation: slide-down 0.8s 0.2s ease-out forwards;
+    opacity: 0;
+}
+.animate-slide-down-hero-delay-2 {
+     animation: slide-down 0.8s 0.4s ease-out forwards;
+    opacity: 0;
+}
+
+@keyframes slide-down {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Navbar hover effect */
+.hover-lift {
+    transition: transform 0.2s ease-in-out;
+}
+.hover-lift:hover {
+    transform: translateY(-2px);
+}
+
+/* Card hover effect for free coaching page */
+.card-hover-effect {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+.card-hover-effect:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+
+/* Custom styles for prose (blog posts) */
+.prose h1, .prose h2, .prose h3, .prose h4 {
+    color: #ffffff;
+}
+
+.prose h4 {
+    margin-top: 2em;
+    margin-bottom: 0.5em;
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.prose p {
+    line-height: 2.0; /* Further increased line height */
+    font-size: 1.125rem; /* text-lg */
+    margin-bottom: 1.5em;
+}
+
+.prose a {
+    color: #f87171; /* red-400 */
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.prose a:hover {
+    color: #ef4444; /* red-500 */
+}
+
+.prose blockquote {
+    border-left-color: #ef4444; /* red-500 */
+    color: #d1d5db; /* gray-300 */
+}
+
+.prose strong {
+    color: #f9fafb; /* gray-50 */
+}
+
