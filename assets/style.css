@@ -78,16 +78,18 @@ body {
     color: #ffffff;
 }
 
-.prose h4 {
-    margin-top: 2em;
-    margin-bottom: 0.5em;
-    font-size: 1.25rem;
-    font-weight: 600;
+/* A single, consistent style for all subheadings */
+.prose h2, .prose h3, .prose h4 {
+    font-size: 1.875rem; /* text-3xl */
+    font-weight: 700;
+    margin-top: 2.5em;
+    margin-bottom: 1em;
 }
 
-.prose p {
-    line-height: 2.0; /* Further increased line height */
-    font-size: 1.125rem; /* text-lg */
+/* A larger, more readable font size for all text elements */
+.prose p, .prose li, .prose blockquote {
+    line-height: 2.0;
+    font-size: 1.25rem; /* text-xl */
     margin-bottom: 1.5em;
 }
 
@@ -104,6 +106,7 @@ body {
 .prose blockquote {
     border-left-color: #ef4444; /* red-500 */
     color: #d1d5db; /* gray-300 */
+    padding-left: 1em;
 }
 
 .prose strong {
