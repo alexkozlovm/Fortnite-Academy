@@ -188,18 +188,19 @@ if (canvas) {
 }
 
 // Typing effect for hero title
-const heroTitle = document.getElementById('hero-title');
-if (heroTitle) {
+const typingEffectSpan = document.getElementById('typing-effect');
+if (typingEffectSpan) {
     const text = "Unlock Your Competitive Potential";
     let index = 0;
+    const cursorSpan = document.querySelector('.blinking-cursor');
 
     function type() {
         if (index < text.length) {
-            heroTitle.innerHTML = text.substring(0, index + 1) + '<span class="blinking-cursor">|</span>';
+            typingEffectSpan.textContent = text.substring(0, index + 1);
             index++;
             setTimeout(type, 80);
         } else {
-             heroTitle.innerHTML = text; // Remove cursor when done
+            if(cursorSpan) cursorSpan.style.display = 'none'; // Hide cursor when done
         }
     }
     type();
@@ -207,14 +208,14 @@ if (heroTitle) {
 
 // Horizontal Scrolling Reviews
 const reviews = [
-    { user: 'Lunar', text: 'Best coach ever i can not say anything bad', pfp: '/pfp/pfp1.jpeg' },
+    { user: 'Lunar', text: 'Best coach ever i can not say anything bad', pfp: '/pfp/pfp1.png' },
     { user: 'MakutoTBRC', text: 'Vouch W dropmaps', pfp: '/pfp/pfp2.png' },
     { user: 'kyroMD', text: 'vouch @Hxptix will go back to him 100% in depth vod review and helping with my input for just 10 quid', pfp: '/pfp/pfp3.png' },
     { user: 'loric!', text: 'w coaching, he helped me actually improve and told me excatly what was wrong with my gameplay in-game and while watching it, will come back again W scared', pfp: '/pfp/pfp4.png' },
-    { user: 'BIG ethangr.', text: 'VOUCH @! scared god igl helped me learn mistakes and js overall improve, made me a better fighter and player in endgames', pfp: '/pfp/pfp5.jpeg' },
-    { user: 'vision', text: 'BEST FUCKING COACH GOT MY FIRST EARNS IN CCC @! scared ILY', pfp: '/pfp/pfp6.jpeg' },
+    { user: 'BIG ethangr.', text: 'VOUCH @! scared god igl helped me learn mistakes and js overall improve, made me a better fighter and player in endgames', pfp: '/pfp/pfp5.png' },
+    { user: 'vision', text: 'BEST FUCKING COACH GOT MY FIRST EARNS IN CCC @! scared ILY', pfp: '/pfp/pfp6.png' },
     { user: 'Ohbabyilovemoney', text: '@! scared pretty good coach when. I get better ill come back', pfp: '/pfp/pfp7.png' },
-    { user: 'lawz!', text: '@! scared good coach helps on rotates and decisions', pfp: '/pfp/pfp8.jpeg' },
+    { user: 'lawz!', text: '@! scared good coach helps on rotates and decisions', pfp: '/pfp/pfp8.png' },
     { user: 'lowground.movSA', text: '@! scared been here since day one 0 members hes trust worthy coach', pfp: 'https://placehold.co/100x100/1f2937/ef4444?text=FA' },
     { user: 'omen', text: 'scared = goat coach', pfp: 'https://placehold.co/100x100/1f2937/ef4444?text=FA' },
     { user: 'kamuiBBL', text: 'vouch @! scared good coach helped me a lot', pfp: 'https://placehold.co/100x100/1f2937/ef4444?text=FA' },
@@ -242,7 +243,7 @@ if (reviewsContainer) {
         const reviewCard = `
             <div class="flex-shrink-0 w-80 bg-gray-800 p-6 rounded-lg shadow-lg snap-start">
                 <div class="flex items-center mb-4">
-                    <img src="${review.pfp}" alt="${review.user}" class="w-12 h-12 rounded-full mr-4 object-cover">
+                    <img src="${review.pfp}" alt="${review.user}" class="w-12 h-12 rounded-full mr-4 object-cover" onerror="this.onerror=null;this.src='https://placehold.co/100x100/1f2937/ef4444?text=FA';">
                     <h4 class="font-bold text-lg text-white">${review.user}</h4>
                 </div>
                 <p class="text-gray-300 italic">"${review.text}"</p>
@@ -259,3 +260,4 @@ if (reviewsContainer) {
         reviewsContainer.scrollBy({ left: 300, behavior: 'smooth' });
     });
 }
+
