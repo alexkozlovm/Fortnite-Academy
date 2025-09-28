@@ -3,7 +3,7 @@ layout: ../blog-layout.hbs
 title: "How to Fix Your Nerves When Fighting"
 author: "Scared"
 date: "September 29, 2025"
-image: "/assets/mental.jpg"
+image: "/mental.jpg"
 ---
 
 Confidence is one of the most important weapons in Fortnite. You can have the best mechanics in the world, but they mean nothing if your nerves take over in a high-pressure fight. This guide focuses on small, simple things you can do to build real, stable confidence and stay calm when it matters most.

@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/assets/style.css">
+    <link rel="stylesheet" href="/style.css">
 </head>
 <body class="bg-gray-900 text-white">
 
@@ -20,9 +20,9 @@
                 <span class="hover-lift">Fortnite Academy</span>
             </a>
             <nav class="hidden md:flex space-x-6 items-center">
-                <a href="/#about" class="text-gray-300 hover:text-red-400 transition-colors hover-lift">About</a>
-                <a href="/#services" class="text-gray-300 hover:text-red-400 transition-colors hover-lift">Coaching</a>
-                <a href="/#vouches" class="text-gray-300 hover:text-red-400 transition-colors hover-lift">Vouches</a>
+                <a href="#about" class="text-gray-300 hover:text-red-400 transition-colors hover-lift">About</a>
+                <a href="#services" class="text-gray-300 hover:text-red-400 transition-colors hover-lift">Coaching</a>
+                <a href="#vouches" class="text-gray-300 hover:text-red-400 transition-colors hover-lift">Vouches</a>
                 <a href="/free-coaching.html" class="text-gray-300 hover:text-red-400 transition-colors hover-lift">Free Perks</a>
                 <a href="https://discord.gg/fortnite-coaching" target="_blank" class="bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-lg transition-transform transform hover:scale-105">Join Discord</a>
             </nav>
@@ -32,21 +32,23 @@
         </div>
         <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden md:hidden">
-            <a href="/#about" class="block py-2 px-4 text-sm text-gray-300 hover:bg-gray-800">About</a>
-            <a href="/#services" class="block py-2 px-4 text-sm text-gray-300 hover:bg-gray-800">Coaching</a>
-            <a href="/#vouches" class="block py-2 px-4 text-sm text-gray-300 hover:bg-gray-800">Vouches</a>
+            <a href="#about" class="block py-2 px-4 text-sm text-gray-300 hover:bg-gray-800">About</a>
+            <a href="#services" class="block py-2 px-4 text-sm text-gray-300 hover:bg-gray-800">Coaching</a>
+            <a href="#vouches" class="block py-2 px-4 text-sm text-gray-300 hover:bg-gray-800">Vouches</a>
             <a href="/free-coaching.html" class="block py-2 px-4 text-sm text-gray-300 hover:bg-gray-800">Free Perks</a>
-             <a href="https://discord.gg/fortnite-coaching" target="_blank" class="block py-2 px-4 text-sm bg-red-600 text-white hover:bg-red-700">Join Discord</a>
+            <a href="https://discord.gg/fortnite-coaching" target="_blank" class="block py-2 px-4 text-sm bg-red-600 text-white hover:bg-red-700">Join Discord</a>
         </div>
     </header>
 
     <main>
         <!-- Hero Section -->
-        <section class="min-h-screen flex items-center justify-center text-center relative overflow-hidden">
+        <section class="min-h-screen flex items-center justify-center text-center bg-gray-900 relative overflow-hidden">
             <canvas id="particle-canvas" class="absolute top-0 left-0 w-full h-full z-0"></canvas>
             <div class="container mx-auto px-4 z-10">
-                <h1 id="hero-title" class="text-5xl md:text-7xl font-extrabold leading-tight mb-2 animate-slide-down-hero"></h1>
-                <p class="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto mb-6 animate-slide-down-hero-delay">
+                <h1 class="text-5xl md:text-7xl font-extrabold leading-tight mb-2 animate-slide-down-hero">
+                    <span id="typing-effect"></span><span class="blinking-cursor">|</span>
+                </h1>
+                <p class="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto mb-8 animate-slide-down-hero-delay">
                     Best Fortnite coaching in the world, with 150+ vouches/reviews. Proven results such as earnings and FNCS heats qualification.
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4 justify-center animate-slide-down-hero-delay-2">
@@ -105,19 +107,21 @@
         </section>
 
         <!-- Proof Section -->
-        <section id="proof" class="py-20 bg-gray-800/50">
-            <div class="container mx-auto px-4 text-center fade-in-section">
-                <h2 class="text-4xl font-extrabold">Proof in the Placements</h2>
-                <p class="text-lg text-gray-300 mt-2 mb-8 max-w-3xl mx-auto">We don't just teach theory. We produce results.</p>
-                <div class="max-w-4xl mx-auto bg-gray-900 rounded-lg shadow-2xl p-4">
-                    <img src="/assets/result.png" alt="Tournament Results" class="rounded-md w-full">
-                    <p class="mt-4 text-lg text-red-300 font-semibold">
-                        One of our clients qualified for his first ever FNCS Group Stages in the 2025 Major 3.
+         <section id="proof" class="py-20 bg-gray-800/50">
+            <div class="container mx-auto px-4 fade-in-section">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl font-extrabold">Proof in the Placements</h2>
+                    <p class="text-lg text-gray-300 mt-2">Real results from dedicated coaching.</p>
+                </div>
+                <div class="max-w-4xl mx-auto bg-gray-900 rounded-xl shadow-lg p-4">
+                    <img src="/result.png" alt="Tournament Result FNCS Heats" class="rounded-lg w-full">
+                    <p class="text-center mt-4 text-gray-300 text-lg">
+                       One of our clients was able to qualify for his first ever FNCS Group Stages in the 2025 Major 3.
                     </p>
                 </div>
             </div>
         </section>
-
+        
         <!-- Services / Coaching Plans Section -->
         <section id="services" class="py-20 bg-gray-900">
             <div class="container mx-auto px-4">
@@ -138,14 +142,15 @@
                         <a href="https://discord.gg/fortnite-coaching" target="_blank" class="mt-auto w-full text-center bg-gray-700 hover:bg-gray-600 text-white font-bold py-2 px-4 rounded-lg transition-transform transform hover:scale-105">Create a Ticket</a>
                     </div>
                     <!-- VOD Review -->
-                    <div class="relative bg-gray-800 p-8 rounded-xl shadow-2xl border-2 border-red-500 flex flex-col fade-in-section overflow-hidden">
-                        <span class="absolute top-2 -right-10 bg-red-500 text-white text-xs font-bold px-10 py-1 rotate-45">POPULAR</span>
+                    <div class="bg-gray-800 p-8 rounded-xl shadow-2xl border-2 border-red-500 flex flex-col fade-in-section relative overflow-hidden">
+                        <div class="absolute top-0 right-0 -mr-12 -mt-12 w-32 h-32 bg-red-500 transform rotate-45"></div>
+                        <span class="absolute top-4 right-4 text-white text-xs font-bold z-10">POPULAR</span>
                         <h3 class="text-2xl font-bold text-red-400 mb-4">VOD Review Session</h3>
                         <p class="text-gray-400 mb-6 flex-grow">In-depth analysis of your tournament gameplay to identify mistakes and areas for improvement.</p>
                         <div class="mb-6">
                              <p class="text-white"><span class="font-bold text-4xl">$10</span><br><span class="text-gray-400">/ 10 Game Review</span></p>
                         </div>
-                        <a href="https://discord.gg/fortnite-coaching" target="_blank" class="mt-auto w-full text-center bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-lg transition-transform transform hover:scale-105">Book a Review</a>
+                        <a href="https://discord.gg/fortnite-coaching" target="_blank" class="mt-auto w-full text-center bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-lg transition-transform transform hover:scale-105 z-10">Book a Review</a>
                     </div>
                     <!-- Tournament Coaching -->
                     <div class="bg-gray-800 p-8 rounded-xl shadow-2xl border border-gray-700 flex flex-col fade-in-section">
@@ -154,7 +159,7 @@
                         <div class="mb-6">
                             <p class="text-white"><span class="font-bold text-4xl">$15</span><br><span class="text-gray-400">/ Per Tournament</span></p>
                         </div>
-                        <a href="YOUR_GOOGLE_CALENDAR_LINK" target="_blank" class="mt-auto w-full text-center bg-gray-700 hover:bg-gray-600 text-white font-bold py-2 px-4 rounded-lg transition-transform transform hover:scale-105">Check Availability</a>
+                        <a href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ3B4KhNfPabSDukL0tsyk7Wqze9nKfTDXHHEyat8CvfOtzdr2SrTbMPxrawHGJOEHQHgkGMvkcX?gv=true" target="_blank" class="mt-auto w-full text-center bg-gray-700 hover:bg-gray-600 text-white font-bold py-2 px-4 rounded-lg transition-transform transform hover:scale-105">Check Availability</a>
                     </div>
                 </div>
             </div>
@@ -162,21 +167,57 @@
 
         <!-- Vouches / Testimonials -->
         <section id="vouches" class="py-20 bg-gray-800/50">
-            <div class="container mx-auto px-4 fade-in-section">
-                <div class="text-center mb-12">
+            <div class="container mx-auto px-4">
+                 <div class="text-center mb-12 fade-in-section">
                     <h2 class="text-4xl font-extrabold">What Players Are Saying</h2>
                     <p class="text-lg text-gray-300 mt-2">150+ positive reviews from satisfied players.</p>
                 </div>
-                <div class="relative max-w-7xl mx-auto">
-                    <div id="reviews-container" class="flex overflow-x-hidden scroll-smooth snap-x snap-mandatory space-x-6 pb-4">
-                        <!-- Review Cards will be injected here by JS -->
+                <div class="relative max-w-7xl mx-auto fade-in-section">
+                    <div id="reviews-container" class="flex overflow-x-hidden space-x-6">
+                        <!-- Reviews will be injected here by JavaScript -->
                     </div>
-                    <button id="scroll-left" class="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-1/2 bg-gray-700 hover:bg-red-600 p-3 rounded-full z-10 transition-all duration-300 opacity-50 hover:opacity-100">
+                    <button id="scroll-left" class="absolute top-1/2 left-0 -translate-y-1/2 -translate-x-1/2 bg-gray-700 hover:bg-gray-600 p-3 rounded-full z-10 transition-transform transform hover:scale-110">
                         <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
                     </button>
-                    <button id="scroll-right" class="absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/2 bg-gray-700 hover:bg-red-600 p-3 rounded-full z-10 transition-all duration-300 opacity-50 hover:opacity-100">
+                    <button id="scroll-right" class="absolute top-1/2 right-0 -translate-y-1/2 translate-x-1/2 bg-gray-700 hover:bg-gray-600 p-3 rounded-full z-10 transition-transform transform hover:scale-110">
                         <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
                     </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Free Coaching Section -->
+        <section id="free" class="py-20 bg-gray-900">
+            <div class="container mx-auto px-4 fade-in-section">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl font-extrabold">Get Access to Free Resources</h2>
+                    <p class="text-lg text-red-400 mt-2">Join the Discord for invaluable perks at no cost.</p>
+                </div>
+                <div class="bg-gray-800 rounded-xl shadow-lg p-8 lg:p-12 max-w-5xl mx-auto">
+                     <h3 class="text-3xl font-bold text-white mb-4">How to Unlock Free Coaching</h3>
+                    <p class="text-gray-300 mb-8">Simply complete one of the two options below, send a screenshot in our Discord, and get access!</p>
+                    <div class="grid md:grid-cols-2 gap-8 mb-10">
+                        <div class="bg-gray-900 p-6 rounded-lg text-center">
+                            <p class="text-5xl mb-2">1️⃣</p>
+                            <h4 class="text-xl font-bold">Use Creator Code</h4>
+                            <p class="text-gray-400">Use code <span class="font-bold text-white">fn.scared</span> in the Fortnite Item Shop.</p>
+                        </div>
+                        <div class="bg-gray-900 p-6 rounded-lg text-center">
+                            <p class="text-5xl mb-2">2️⃣</p>
+                            <h4 class="text-xl font-bold">Follow on TikTok</h4>
+                            <p class="text-gray-400">Follow the TikTok account linked in the Discord.</p>
+                        </div>
+                    </div>
+
+                    <h4 class="text-2xl font-bold text-white mb-6 text-center">What's Included for FREE?</h4>
+                    <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-6 text-gray-300">
+                        <div class="flex items-center space-x-3"><svg class="w-6 h-6 text-green-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg> <span>High-Level Video Coaching</span></div>
+                        <div class="flex items-center space-x-3"><svg class="w-6 h-6 text-green-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg> <span>250+ Custom Dropmaps</span></div>
+                        <div class="flex items-center space-x-3"><svg class="w-6 h-6 text-green-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg> <span>100+ Pro Lootpaths</span></div>
+                        <div class="flex items-center space-x-3"><svg class="w-6 h-6 text-green-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg> <span>Live Group Coaching</span></div>
+                        <div class="flex items-center space-x-3"><svg class="w-6 h-6 text-green-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg> <span>Detailed Analytics & Stats</span></div>
+                        <div class="flex items-center space-x-3"><svg class="w-6 h-6 text-green-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg> <span>Off-spawn Practice Sessions</span></div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -198,9 +239,9 @@
     <!-- Footer -->
     <footer class="bg-gray-900 border-t border-gray-800 py-6">
         <div class="container mx-auto text-center text-gray-400">
-            <div class="flex justify-center space-x-6 mb-4">
+             <div class="flex justify-center space-x-6 mb-4">
                 <a href="https://x.com/scaredfn77" target="_blank" class="text-gray-400 hover:text-white transition-transform transform hover:scale-125">
-                    <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                     <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                         <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
                     </svg>
                 </a>
@@ -214,7 +255,7 @@
         </div>
     </footer>
 
-    <script type="module" src="/assets/index.js"></script>
+    <script type="module" src="/index.js"></script>
 </body>
 </html>
 
