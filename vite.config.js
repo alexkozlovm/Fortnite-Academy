@@ -1,18 +1,24 @@
 import { resolve } from 'path';
 import { defineConfig } from 'vite';
+import { sync as globSync } from 'glob';
 import customMarkdownPlugin from './vite-plugin-custom-markdown.js';
 
-// This function finds all your HTML and Markdown files
-// so we can tell Vite to build each one as a separate page.
+// A helper to get the current directory path in an ES module environment
+const __dirname = new URL('.', import.meta.url).pathname;
+
+// Find all HTML and blog markdown files to use as entry points for Vite.
+// We use globSync which is the ES module equivalent of glob.sync.
 const entryPoints = {
   ...Object.fromEntries(
-    require('glob').sync('./*.html').map(file => [
-      file.slice(0, file.length - '.html'.length),
+    globSync('./*.html').map(file => [
+      // Creates a clean name like 'index' or 'free-coaching' from './index.html'
+      file.slice(2, file.length - '.html'.length),
       resolve(__dirname, file)
     ])
   ),
   ...Object.fromEntries(
-    require('glob').sync('./blog/*.md').map(file => [
+    globSync('./blog/*.md').map(file => [
+      // Creates a clean name like 'blog/how-to-vod-review' from './blog/how-to-vod-review.md'
       `blog/${file.slice('./blog/'.length, file.length - '.md'.length)}`,
       resolve(__dirname, file)
     ])
@@ -20,9 +26,8 @@ const entryPoints = {
 };
 
 export default defineConfig({
-  // This is a crucial fix. It tells Vite to treat your 'assets'
-  // folder as a public directory, which means it will be copied
-  // directly to the final build output. This will fix your broken images.
+  // This tells Vite to copy the 'assets' folder directly to the
+  // final build output. This is what makes your images and styles work on Vercel.
   publicDir: 'assets',
 
   plugins: [
@@ -32,7 +37,7 @@ export default defineConfig({
   build: {
     rollupOptions: {
       // This tells Vite to build every page, not just index.html.
-      // This will fix the 404 error for your free-coaching page.
+      // This is what fixes the 404 errors on Vercel.
       input: entryPoints,
     },
   },

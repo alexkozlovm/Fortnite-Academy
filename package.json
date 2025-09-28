@@ -18,7 +18,8 @@
     "vite": "^5.0.0",
     "front-matter": "^4.0.2",
     "markdown-it": "^14.0.0",
-    "handlebars": "^4.7.8"
+    "handlebars": "^4.7.8",
+    "glob": "^10.3.10"
   }
 }
 
