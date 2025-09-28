@@ -3,6 +3,7 @@ layout: ../blog-layout.hbs
 title: "How to VOD Review Like a Pro"
 author: "Scared"
 date: "September 27, 2025"
+image: "/assets/vod.jpg"
 ---
 
 VOD reviewing is one of the fastest ways to get better at fighting. It’s not just about watching your games; it’s about actively removing mistakes from your gameplay to become a smarter fighter. Top pros like Vadil went from zero earnings to becoming one of the scariest fighters in EU by using this exact method. Let's break down how you can do it too.
@@ -50,3 +51,4 @@ Watching the VOD is only half the battle. You need to act on what you find. For 
 * **Don't Get Overwhelmed:** Focus on fixing one or two major recurring issues at a time. Trying to change everything at once is a recipe for failure.
 
 By consistently eliminating the small mistakes that get you killed, your fighting IQ and damage ratios will improve dramatically. That is the entire goal of fighting: to win engagements cleanly and consistently.
+
