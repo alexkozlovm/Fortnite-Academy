@@ -4,11 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ title }} | Fortnite Academy</title>
+    <meta name="description" content="{{ description }}">
+    <link rel="canonical" href="https://www.fortnite-academy.com{{ url }}">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/style.css">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "{{ title }}",
+        "name": "{{ title }}",
+        "description": "{{ description }}",
+        "image": "https://www.fortnite-academy.com{{ image }}",
+        "datePublished": "{{ date }}",
+        "author": {
+            "@type": "Person",
+            "name": "{{ author }}"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Fortnite Academy",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://www.fortnite-academy.com/assets/logo.png"
+            }
+        }
+    }
+    </script>
 </head>
 <body class="bg-gray-900 text-white">
      <!-- Header / Navigation -->
@@ -46,7 +71,7 @@
                 <p class="text-lg text-gray-400">By {{ author }} | Published on: {{ date }}</p>
             </header>
             <div class="prose prose-invert lg:prose-xl mx-auto text-gray-300">
-                <img src="{{ image }}" alt="{{ title }}" class="rounded-lg mb-8">
+                <center><img src="{{ image }}" alt="{{ title }}" class="rounded-lg mb-8"></center>
                 {{{ body }}}
             </div>
         </article>

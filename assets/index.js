@@ -261,3 +261,28 @@ if (reviewsContainer) {
     });
 }
 
+
+// Newsletter Signup Form
+const newsletterForm = document.getElementById('newsletter-form');
+const emailInput = document.getElementById('email-input');
+const successMessage = document.getElementById('success-message');
+
+if (newsletterForm) {
+    newsletterForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const email = emailInput.value;
+
+        // In a real application, you would send the email to your server/service here.
+        // For this demo, we'll just show a success message.
+        if (email) {
+            successMessage.classList.remove('hidden');
+            emailInput.value = '';
+
+            // Optional: Hide the message after a few seconds
+            setTimeout(() => {
+                successMessage.classList.add('hidden');
+            }, 5000);
+        }
+    });
+}
+
